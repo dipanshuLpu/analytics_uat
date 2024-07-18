@@ -1,94 +1,178 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-<h1 id="user_name">sales@</h1>
-<div class = "dipanshu">Button </div>
-    <iframe src="https://www.google.com/" width="600" height="400" frameborder="0" scrolling="auto"></iframe>
-
-  <md-content class="md-padding">
-    <h1>Default HTML Sandbox</h1>
-    <h2>Details/summary</h2>
-    <details>
-      <summary>This is the thing you focus on</summary>
-      These are the contents
-    </details>
-    <h2>Radio button test</h2>
-    <fieldset>s
-      <label>
-        Cats
-        <input type="radio" name="animals">
-      </label>
-      <label>
-        Dogs
-        <input type="radio" name="animals">
-      </label>
-    </fieldset>
-<input id="uname">
-<input id="lname">
-<input id="cname">
-<input id="input">
-    <h2>disabled test</h2>
-    <div>
-      <a href="#" disabled>link with [disabled]</a>
-      <div disabled>disabled button</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e5efff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            width: 100%;
+            background: #363b41;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            width: calc(75% - 10px);
+        }
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            width: calc(25% - 10px);
+        }
+        .section {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .chart {
+            height: 200px;
+            background-color: #d3e4ff;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .events, .tasks {
+            display: flex;
+            justify-content: space-between;
+        }
+        .record, .deal {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .assistant {
+            position: sticky;
+            top: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .assistant h3 {
+            margin-top: 0;
+        }
+        .iframe-section {
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Sales Dashboard</div>
+        <div class="content">
+            <div class="left-column">
+                <div class="section">
+                    <h2>Quarterly Performance</h2>
+                    <div class="chart">[Chart Placeholder]</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Sales</th>
+                                <th>Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>April</td>
+                                <td>100</td>
+                                <td>$10,000</td>
+                            </tr>
+                            <tr>
+                                <td>May</td>
+                                <td>150</td>
+                                <td>$15,000</td>
+                            </tr>
+                            <tr>
+                                <td>June</td>
+                                <td>200</td>
+                                <td>$20,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="section">
+                    <h2>Today's Events</h2>
+                    <p>Looks like you're free and clear the rest of the day.</p>
+                </div>
+                <div class="iframe-section">
+                    <iframe src="https://www.google.com" width="100%" height="400px"></iframe>
+                </div>
+                <div class="section">
+                    <h2>Today's Tasks</h2>
+                    <p>Nothing due today. Be a go-getter, and check back soon.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Recent Records</h2>
+                    <div class="record">Q-00164</div>
+                    <div class="record">Q-00163</div>
+                    <div class="record">Vattenfall</div>
+                </div>
+                <div class="section">
+                    <h2>Key Deals - Recent Opportunities</h2>
+                    <div class="deal">ABC USD: 17.07.2024 - $100.00</div>
+                    <div class="deal">Vattenfall: 06.07.2023 - $15,000,000.00</div>
+                    <div class="deal">United Oil Office Portable Generators</div>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="assistant">
+                    <h3>Assistant</h3>
+                    <div>Opportunity is overdue: <a href="#">ABCD</a></div>
+                    <div>Opportunity is overdue: <a href="#">ABC USD</a></div>
+                    <div>30 days without any activity: <a href="#">test</a></div>
+                </div>
+            </div>
+        </div>
     </div>
-<div>
-<p>
-<div>
-<div aria-disabled="true">aria-disabled button Dipanshu</div>
-</p>
-      </div>
-</div>
-    <h2>aria-hidden test</h2>
-    <div aria-hidden="true">
-      <p><code>aria-hidden="true"</code> and tab-index</p>
-      <a href="#">aria-hidden link</a>
-      <button>aria-hidden button</button>
-    </div>
-    <h2>select label test</h2>
-    <label for="muppetSelect">Muppets</label>
-    <select id="muppetSelect">
-      <option>Animal</option>
-      <option>Cookie Monster</option>
-      <option>Gonzo</option>
-      <option>Ms. Piggy</option>
-      <option>Kermit the Frog</option>
-      <option>Swedish Chef</option>
-      <option>Statler and Waldorf</option>
-      <option>Fozzy Bear</option>
-    </select>
-    <h2>Image alt</h2>
-    <div style="border:1px solid black; margin-top:1em;">
-      <p>The below content should be hidden</p>
-      <div hidden>
-        <p>This content should be hidden</p>
-      </div>
-    </div>
-    <h2>Button Types</h2>
-    
-    <input type="button" value="Input button">
-    <h2>ARIA-Disabled</h2>
-    <div aria-disabled="true">
-      <div role="checkbox" tabindex="0" aria-label="checkbox"></div>
-    </div>
-    <h2>Default label/input</h2>
-    <label for="input">Hamburgers</label>
-    <input id="input">
-    <h2>Links</h2>
-    <a href="#">Link with # href</a>
-    <a href="http://www.google.com">Link with href</a>
-    <h2>Role tests</h2>
-    <label>
-      Search
-      <input type="search">
-    </label>
-    <label>
-      Text
-      <input type="text">
-    </label>
-  <content>
-  </content>
-  </md-content>
 </body>
-
-</html
+</html>
